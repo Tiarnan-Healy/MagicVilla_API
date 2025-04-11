@@ -4,6 +4,7 @@ using MagicVilla_VillaAPI.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MagicVilla_VillaAPI.Migrations
 {
     [DbContext(typeof(ApplicationDBContext))]
-    partial class ApplicationDBContextModelSnapshot : ModelSnapshot
+    [Migration("20250410135359_SeedUserTable")]
+    partial class SeedUserTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -30,18 +33,12 @@ namespace MagicVilla_VillaAPI.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<DateTime>("CreatedDate")
-                        .HasColumnType("datetime2");
-
                     b.Property<bool>("IsWebUser")
                         .HasColumnType("bit");
 
                     b.Property<string>("Password")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("UpdatedDate")
-                        .HasColumnType("datetime2");
 
                     b.Property<string>("Username")
                         .IsRequired()
@@ -55,20 +52,9 @@ namespace MagicVilla_VillaAPI.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDate = new DateTime(2025, 4, 10, 15, 2, 0, 535, DateTimeKind.Local).AddTicks(5997),
                             IsWebUser = true,
                             Password = "admin123",
-                            UpdatedDate = new DateTime(2025, 4, 10, 15, 2, 0, 535, DateTimeKind.Local).AddTicks(5998),
                             Username = "admin"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            CreatedDate = new DateTime(2025, 4, 10, 15, 2, 0, 535, DateTimeKind.Local).AddTicks(6005),
-                            IsWebUser = false,
-                            Password = "admin123",
-                            UpdatedDate = new DateTime(2025, 4, 10, 15, 2, 0, 535, DateTimeKind.Local).AddTicks(6006),
-                            Username = "admin2"
                         });
                 });
 
@@ -120,66 +106,66 @@ namespace MagicVilla_VillaAPI.Migrations
                         {
                             Id = 1,
                             Amenity = "",
-                            CreatedDate = new DateTime(2025, 4, 10, 15, 2, 0, 535, DateTimeKind.Local).AddTicks(5850),
+                            CreatedDate = new DateTime(2025, 4, 10, 14, 53, 59, 564, DateTimeKind.Local).AddTicks(5148),
                             Details = "Details about Royal Villa. Lorem ipsum dolor sit amet.",
                             ImageUrl = "",
                             Name = "Royal Villa",
                             Occupancy = 5,
                             Rate = 200.0,
                             SqFt = 550,
-                            UpdatedDate = new DateTime(2025, 4, 10, 15, 2, 0, 535, DateTimeKind.Local).AddTicks(5891)
+                            UpdatedDate = new DateTime(2025, 4, 10, 14, 53, 59, 564, DateTimeKind.Local).AddTicks(5191)
                         },
                         new
                         {
                             Id = 2,
                             Amenity = "",
-                            CreatedDate = new DateTime(2025, 4, 10, 15, 2, 0, 535, DateTimeKind.Local).AddTicks(5894),
+                            CreatedDate = new DateTime(2025, 4, 10, 14, 53, 59, 564, DateTimeKind.Local).AddTicks(5194),
                             Details = "Details about Luxury Villa. Lorem ipsum dolor sit amet.",
                             ImageUrl = "",
                             Name = "Luxury Villa",
                             Occupancy = 4,
                             Rate = 150.0,
                             SqFt = 450,
-                            UpdatedDate = new DateTime(2025, 4, 10, 15, 2, 0, 535, DateTimeKind.Local).AddTicks(5895)
+                            UpdatedDate = new DateTime(2025, 4, 10, 14, 53, 59, 564, DateTimeKind.Local).AddTicks(5195)
                         },
                         new
                         {
                             Id = 3,
                             Amenity = "",
-                            CreatedDate = new DateTime(2025, 4, 10, 15, 2, 0, 535, DateTimeKind.Local).AddTicks(5898),
+                            CreatedDate = new DateTime(2025, 4, 10, 14, 53, 59, 564, DateTimeKind.Local).AddTicks(5198),
                             Details = "Details about Deluxe Villa. Lorem ipsum dolor sit amet.",
                             ImageUrl = "",
                             Name = "Deluxe Villa",
                             Occupancy = 3,
                             Rate = 100.0,
                             SqFt = 350,
-                            UpdatedDate = new DateTime(2025, 4, 10, 15, 2, 0, 535, DateTimeKind.Local).AddTicks(5899)
+                            UpdatedDate = new DateTime(2025, 4, 10, 14, 53, 59, 564, DateTimeKind.Local).AddTicks(5199)
                         },
                         new
                         {
                             Id = 4,
                             Amenity = "",
-                            CreatedDate = new DateTime(2025, 4, 10, 15, 2, 0, 535, DateTimeKind.Local).AddTicks(5901),
+                            CreatedDate = new DateTime(2025, 4, 10, 14, 53, 59, 564, DateTimeKind.Local).AddTicks(5201),
                             Details = "Details about Standard Villa. Lorem ipsum dolor sit amet.",
                             ImageUrl = "",
                             Name = "Standard Villa",
                             Occupancy = 2,
                             Rate = 80.0,
                             SqFt = 250,
-                            UpdatedDate = new DateTime(2025, 4, 10, 15, 2, 0, 535, DateTimeKind.Local).AddTicks(5902)
+                            UpdatedDate = new DateTime(2025, 4, 10, 14, 53, 59, 564, DateTimeKind.Local).AddTicks(5202)
                         },
                         new
                         {
                             Id = 5,
                             Amenity = "",
-                            CreatedDate = new DateTime(2025, 4, 10, 15, 2, 0, 535, DateTimeKind.Local).AddTicks(5904),
+                            CreatedDate = new DateTime(2025, 4, 10, 14, 53, 59, 564, DateTimeKind.Local).AddTicks(5204),
                             Details = "Details about Premium Villa. Lorem ipsum dolor sit amet.",
                             ImageUrl = "",
                             Name = "Premium Villa",
                             Occupancy = 6,
                             Rate = 250.0,
                             SqFt = 600,
-                            UpdatedDate = new DateTime(2025, 4, 10, 15, 2, 0, 535, DateTimeKind.Local).AddTicks(5905)
+                            UpdatedDate = new DateTime(2025, 4, 10, 14, 53, 59, 564, DateTimeKind.Local).AddTicks(5205)
                         });
                 });
 #pragma warning restore 612, 618

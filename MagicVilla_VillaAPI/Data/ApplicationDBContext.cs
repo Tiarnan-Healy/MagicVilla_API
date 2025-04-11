@@ -82,6 +82,26 @@ namespace MagicVilla_VillaAPI.Data
                 CreatedDate = DateTime.Now,
                 UpdatedDate = DateTime.Now
             });
+
+            modelBuilder.Entity<User>().HasData(new
+            {
+                Id = 1,
+                Username = "admin",
+                Password = "admin123",
+                IsWebUser = true,
+                CreatedDate = DateTime.Now,
+                UpdatedDate = DateTime.Now
+            },
+
+            new User()
+            {
+                Id = 2,
+                Username = "admin2",
+                Password = "admin123",
+                IsWebUser = false,
+                CreatedDate = DateTime.Now,
+                UpdatedDate = DateTime.Now
+            });
         }
     }
 
